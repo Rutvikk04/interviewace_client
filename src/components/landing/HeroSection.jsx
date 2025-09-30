@@ -22,11 +22,11 @@ const HeroSection = () => {
 
                 <div className="mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto text-text-default">
                     <div className="tech-badge bg-surface p-4 rounded-xl border border-custom flex flex-col items-center">
-                        <i data-lucide="react" className="w-10 h-10 text-[#61DAFB]"></i>
+                        <span className=" fa-brands text-4xl fa-react text-[#61DAFB]"></span>
                         <span className="mt-2 text-sm">React</span>
                     </div>
                     <div className="tech-badge bg-surface p-4 rounded-xl border border-custom flex flex-col items-center">
-                        <i data-lucide="nodejs" className="w-10 h-10 text-[#68A063]"></i>
+                        <i className="fa-brands fa-node text-4xl text-[#68A063]"></i>
                         <span className="mt-2 text-sm">Node.js</span>
                     </div>
                     <div className="tech-badge bg-surface p-4 rounded-xl border border-custom flex flex-col items-center">
@@ -34,15 +34,15 @@ const HeroSection = () => {
                         <span className="mt-2 text-sm">MongoDB</span>
                     </div>
                     <div className="tech-badge bg-surface p-4 rounded-xl border border-custom flex flex-col items-center">
-                        <i data-lucide="python" className="w-10 h-10 text-[#3776AB]"></i>
+                        <i className="fa-brands fa-python text-4xl text-[#3776AB]"></i>
                         <span className="mt-2 text-sm">Python</span>
                     </div>
                     <div className="tech-badge bg-surface p-4 rounded-xl border border-custom flex flex-col items-center">
-                        <i data-lucide="java" className="w-10 h-10 text-[#007396]"></i>
+                        <i className="fa-brands fa-java text-4xl  text-[#FF9900]"></i>
                         <span className="mt-2 text-sm">Java</span>
                     </div>
                     <div className="tech-badge bg-surface p-4 rounded-xl border border-custom flex flex-col items-center">
-                        <i data-lucide="aws" className="w-10 h-10 text-[#FF9900]"></i>
+                        <i className="fa-brands fa-aws text-4xl text-[#007396]"></i>
                         <span className="mt-2 text-sm">AWS</span>
                     </div>
                 </div>

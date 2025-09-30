@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import API from "@/utils/API";
 import moment from "moment";
+import Link from "next/link";
 
 const DashboardPage = () => {
   const [stats, setStats] = useState(null);
@@ -85,8 +86,8 @@ const DashboardPage = () => {
                 </div>
                 <h3 className="text-lg font-medium text-[var(--color-text-heading)]">Last Attempt</h3>
               </div>
-              <p className="text-3xl font-bold mb-1">{moment(stats?.lastAttempt).fromNow()}</p>
-              <p className="text-sm text-[var(--color-muted)]">{moment(stats?.lastAttempt).format("ll, LT")}</p>
+              <p className="text-3xl font-bold mb-1">{stats?.lastAttempt ? moment(stats?.lastAttempt).fromNow() : "-"}</p>
+              <p className="text-sm text-[var(--color-muted)]">{stats?.lastAttempt ? moment(stats?.lastAttempt).format("ll, LT") : "-"}</p>
             </div>
           </div>
 
@@ -104,6 +105,9 @@ const DashboardPage = () => {
             <div className="text-center text-[var(--color-muted)] py-12">
               <p className="text-xl">No quiz results found.</p>
               <p className="text-sm">Start a quiz to see your stats here.</p>
+              <div className="my-2">
+                <Link className="max-w-fit mx-auto font-medium text-lg text-white" href={"/quiz"}>Give Your First Test</Link>
+              </div>
             </div>
           ) : (
             <div className="overflow-x-auto rounded-xl border border-[var(--color-border)]">

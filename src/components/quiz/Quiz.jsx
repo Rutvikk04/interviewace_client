@@ -64,7 +64,7 @@ const QuizPage = ({ config, questions, onComplete, setStep }) => {
         <div className="bg-[var(--color-background)] text-[var(--color-text-default)] min-h-screen flex flex-col">
             {
                 questions?.length ?
-                    <div className="container mx-auto px-4 py-8 flex-1 flex flex-col max-w-4xl">
+                    <div className="container mx-auto px-4 py-8 flex-1 flex flex-col max-w-4xl mt-20">
                         {/* Progress Bar */}
                         <div className="w-full h-1 bg-[var(--color-border)] rounded-full mb-6">
                             <div

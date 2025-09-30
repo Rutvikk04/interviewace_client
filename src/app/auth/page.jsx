@@ -12,8 +12,8 @@ const AuthPage = () => {
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
         name: '',
-        email: '',
-        password: '',
+        email: 'demo@demo.com',
+        password: 'demo',
         confirmPassword: '',
     });
     const { name, email, password, confirmPassword } = form
@@ -120,7 +120,7 @@ const AuthPage = () => {
                                     <input type="checkbox" id="remember-me" className="rounded border-border text-primary focus:ring-primary" />
                                     <label htmlFor="remember-me" className="ml-2 text-sm text-muted">Remember me</label>
                                 </div>
-                                <a href="#" className="text-sm text-primary hover:underline">Forgot password?</a>
+                                {/* <a href="#" className="text-sm text-primary hover:underline">Forgot password?</a> */}
                             </div>
 
                             <button

@@ -54,13 +54,17 @@ const QuizConfig = ({ onStart }) => {
                                 className="w-full px-4 py-3 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent appearance-none"
                                 required
                             >
-                                <option value="" disabled>Select your tech stack</option>
-                                <option value="ReactJS">ReactJS</option>
-                                <option value="NextJS">NextJS</option>
-                                <option value="NodeJS">NodeJS</option>
-                                <option value="MongoDB">MongoDB</option>
-                                <option value="MERN Stack">MERN Stack</option>
-                                <option value="Full Stack">Full Stack</option>
+                                <option value="" disabled defaultChecked>Select your tech stack</option>
+                                <option value="react">ReactJS</option>
+                                <option value="nextjs">NextJS</option>
+                                <option value="node">NodeJS</option>
+                                <option value="mongodb">MongoDB</option>
+                                <option value="mern">MERN Stack</option>
+                                <option value="fullstack">Full Stack</option>
+                                <option value="aws">AWS</option>
+                                <option value="python">Python</option>
+                                <option value="java">Java</option>
+
                             </select>
                         </div>
 
@@ -76,10 +80,8 @@ const QuizConfig = ({ onStart }) => {
                             >
                                 <option value="" disabled>Select your experience level</option>
                                 <option value="1">0–1 Years</option>
-                                <option value="2">1–2 Years</option>
-                                <option value="3">2–3 Years</option>
-                                <option value="4">3–4 Years</option>
-                                <option value="5">4–5+ Years</option>
+                                <option value="2">2-3 Years</option>
+                                <option value="3">3+ Years</option>
                             </select>
                         </div>
 

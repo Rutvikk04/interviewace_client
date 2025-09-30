@@ -1,9 +1,12 @@
 'use client'
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Cookies from 'js-cookie'
+
 const Navbar = () => {
     const pathname = usePathname()
+    const router = useRouter()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,9 +30,12 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Dashboard', icon: 'fa-gauge', link: "/user-dashboard" },
         { name: 'Quiz', icon: 'fa-question-circle', link: "/quiz" },
-        { name: 'About', icon: 'fa-info-circle', link: "/about" },
-        { name: 'Profile', icon: 'fa-user', link: "/profile" }
     ];
+
+    const handleLogout = () => {
+        Cookies.remove("token")
+        router.push("/auth")
+    }
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}
@@ -37,12 +43,9 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo / Brand */}
-                    <div className="flex-shrink-0 flex items-center">
-                        <div className="flex items-center">
-                            <i className="fas fa-brain text-xl mr-2" style={{ color: 'var(--color-accent)' }}></i>
-                            <span className="text-xl font-semibold" style={{ color: 'var(--color-text-heading)' }}>
-                                MindSpark
-                            </span>
+                    <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                            <span className="text-xl font-bold text-text-heading  font-space">TechInterview<span className="text-primary">Ace</span></span>
                         </div>
                     </div>
 
@@ -75,7 +78,8 @@ const Navbar = () => {
                             ))}
 
                             <button
-                                className="ml-4 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors duration-300"
+                                className="ml-4 px-4 py-2 cursor-pointer rounded-md text-sm font-medium flex items-center transition-colors duration-300"
+                                onClick={()=>handleLogout()}
                                 style={{
                                     color: 'var(--color-text-default)',
                                     backgroundColor: 'var(--color-error)',
