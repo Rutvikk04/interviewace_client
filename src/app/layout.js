@@ -4,6 +4,9 @@ import { ToastContainer } from "react-toastify";
 export const metadata = {
   title: "Interview ACE",
   description: "Practice quizzes tailored to your stack & experience level. Get interview-ready in weeks, not months.",
+  icons: {
+    icon: '/logo.png'
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +17,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-background min-h-screen">
         {children}
-        <ToastContainer />  
+        <ToastContainer />
       </body>
     </html>
   );
